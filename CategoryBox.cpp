@@ -15,6 +15,7 @@ WorkExperienceCategory::WorkExperienceCategory(){/*default*/ }
 
 EducationCategory::EducationCategory(System::String^ Heading, System::String^ StartYear, System::String^ EndYear, System::String^ UserSummary, System::String^ InstitutionName, System::String^ Degree)
 {
+	int x = 5;//test for git commit and git push
 	this->InstitutionName = InstitutionName;
 	this->Degree = Degree;
 
