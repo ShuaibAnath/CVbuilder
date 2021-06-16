@@ -133,7 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CategoryBox.cpp" />
-    <ClCompile Include="CvUser.cpp" />
     <ClCompile Include="EducationWorkExpProjects.cpp" />
     <ClCompile Include="ListOfCVsForm.cpp" />
     <ClCompile Include="main.cpp" />
