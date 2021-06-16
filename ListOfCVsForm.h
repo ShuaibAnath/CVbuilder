@@ -72,9 +72,9 @@ namespace CVBuilder {
 			// 
 			this->ListOfCVsPnl->BackColor = System::Drawing::Color::Red;
 			this->ListOfCVsPnl->Controls->Add(this->ListOfCVsLbl);
-			this->ListOfCVsPnl->Location = System::Drawing::Point(1, 12);
+			this->ListOfCVsPnl->Location = System::Drawing::Point(12, 12);
 			this->ListOfCVsPnl->Name = L"ListOfCVsPnl";
-			this->ListOfCVsPnl->Size = System::Drawing::Size(925, 26);
+			this->ListOfCVsPnl->Size = System::Drawing::Size(904, 26);
 			this->ListOfCVsPnl->TabIndex = 1;
 			// 
 			// ListOfCVsLbl

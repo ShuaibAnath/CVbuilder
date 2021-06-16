@@ -1,7 +1,14 @@
+  CVBuilder.CreateCv.resources - Embedded, ContainedInManifestFile, 
   CVBuilder.EducationWorkExpProjects.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.GeneralPage.resources - Embedded, ContainedInManifestFile, 
   CVBuilder.ListOfCVsForm.resources - Embedded, ContainedInManifestFile, 
   CVBuilder.MyForm.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.MyForm1.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.PersonalDetails.resources - Embedded, ContainedInManifestFile, 
   CVBuilder.SelectTemplateForm.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.Skills.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.Template1.resources - Embedded, ContainedInManifestFile, 
+  CVBuilder.Template2.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly CVBuilder, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -125,15 +132,36 @@ Assembly System.Xml.XDocument, Version=4.0.10.0, Culture=neutral, PublicKeyToken
 	hash=None, flags=None
 Assembly System.Xml.XmlSerializer, Version=4.0.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
 	hash=None, flags=None
+Class CVBuilder.PersonalDetails: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.Skills: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.GeneralPage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.CreateCv: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CVBuilder.EducationWorkExpProjects: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CVBuilder.ListOfCVsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class CVBuilder.SelectTemplateForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class CVBuilder.MyForm1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CVBuilder.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.SelectTemplateForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.Template1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CVBuilder.Template2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

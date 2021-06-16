@@ -26,3 +26,10 @@ C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CV
 C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\K4os.Hash.xxHash.dll
 C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\System.Numerics.Vectors.dll
 C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\MySql.Data.xml
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.MyForm1.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.PersonalDetails.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.CreateCV.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.GeneralPage.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.Skills.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.Template1.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.Template2.resources

@@ -154,7 +154,9 @@ namespace CVBuilder {
 			this->Controls->Add(this->MarsTemplateBtn);
 			this->Controls->Add(this->SelectATemplatePnl);
 			this->Name = L"SelectTemplateForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"SelectTemplateForm";
+			this->Load += gcnew System::EventHandler(this, &SelectTemplateForm::SelectTemplateForm_Load);
 			this->SelectATemplatePnl->ResumeLayout(false);
 			this->SelectATemplatePnl->PerformLayout();
 			this->ResumeLayout(false);
@@ -166,6 +168,8 @@ private: System::Void NeptuneTemplateBtn_Click(System::Object^ sender, System::E
 	this->Hide();
 	ListOfCVsForm^ CVsFormObj = gcnew  ListOfCVsForm();
 	CVsFormObj->ShowDialog();
+}
+private: System::Void SelectTemplateForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

@@ -46,6 +46,7 @@ namespace CVBuilder {
 	private: System::Windows::Forms::Button^ AddInstanceBtn;
 	private: System::Windows::Forms::Label^ VersionLbl;
 
+
 	protected:
 
 	protected:
@@ -84,9 +85,9 @@ namespace CVBuilder {
 			// 
 			this->SectionHeadingPnl->BackColor = System::Drawing::Color::Red;
 			this->SectionHeadingPnl->Controls->Add(this->SectionHeadingLbl);
-			this->SectionHeadingPnl->Location = System::Drawing::Point(0, 12);
+			this->SectionHeadingPnl->Location = System::Drawing::Point(12, 12);
 			this->SectionHeadingPnl->Name = L"SectionHeadingPnl";
-			this->SectionHeadingPnl->Size = System::Drawing::Size(925, 26);
+			this->SectionHeadingPnl->Size = System::Drawing::Size(904, 26);
 			this->SectionHeadingPnl->TabIndex = 2;
 			// 
 			// SectionHeadingLbl
@@ -219,6 +220,7 @@ namespace CVBuilder {
 			this->Name = L"EducationWorkExpProjects";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"EducationWorkExpProjects";
+			this->Load += gcnew System::EventHandler(this, &EducationWorkExpProjects::EducationWorkExpProjects_Load);
 			this->SectionHeadingPnl->ResumeLayout(false);
 			this->SectionHeadingPnl->PerformLayout();
 			this->SectionInstancePnl->ResumeLayout(false);
@@ -228,5 +230,7 @@ namespace CVBuilder {
 
 		}
 #pragma endregion
+private: System::Void EducationWorkExpProjects_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

@@ -38,8 +38,12 @@ System::Void CVBuilder::MyForm::RegisterScreenRegBtn_Click(System::Object^ sende
 					myReader = cmdDataBase->ExecuteReader();
 					MessageBox::Show("Registration successful");
 					this->Hide();
-					SelectTemplateForm^ templateForm = gcnew SelectTemplateForm();
-					templateForm->ShowDialog();
+					
+					CreateCv^ Create = gcnew CreateCv();
+					Create->ShowDialog();
+					
+					
+					
 				}// check if password is confirmed correctly 
 				else
 				{//else password and confirm password does not match
@@ -80,8 +84,9 @@ System::Void  CVBuilder::MyForm::LoginScreenLoginBtn_Click(System::Object^ sende
 		{//Login Successful
 			MessageBox::Show("Login SuccessFul!!!");
 			this->Hide();
-			SelectTemplateForm^ templateForm = gcnew SelectTemplateForm();
-			templateForm->ShowDialog();
+			
+			CreateCv^ Create = gcnew CreateCv();
+			Create->ShowDialog();
 		}
 		else
 		{//else login failed
@@ -121,4 +126,10 @@ System::Void CVBuilder::MyForm::LoginscreenBackBtn_Click(System::Object^ sender,
 {//LoginScreen BackButton pressed
 	LoginPnl->Hide();
 	WelcomePnl->Show();
+}
+
+System::Void CVBuilder::MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
+{//About button pressed
+	MyForm1^ about = gcnew MyForm1();
+	about->ShowDialog();
 }

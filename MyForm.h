@@ -1,6 +1,9 @@
 #pragma once
 
-#include "SelectTemplateForm.h"
+#include "CreateCv.h"
+
+#include "MyForm1.h"
+
 
 //
 //TODO: import cv information
@@ -81,7 +84,8 @@ namespace CVBuilder {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
-		msclr::interop::marshal_context context;
+	private: System::Windows::Forms::Button^ button1;
+		   msclr::interop::marshal_context context;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -92,6 +96,7 @@ namespace CVBuilder {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->WelcomePnl = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->LogoImgPnl = (gcnew System::Windows::Forms::Panel());
 			this->WelcomeScreenLoginBtn = (gcnew System::Windows::Forms::Button());
 			this->WelcomeScreenRegBtn = (gcnew System::Windows::Forms::Button());
@@ -123,6 +128,7 @@ namespace CVBuilder {
 			// WelcomePnl
 			// 
 			this->WelcomePnl->BackColor = System::Drawing::Color::Transparent;
+			this->WelcomePnl->Controls->Add(this->button1);
 			this->WelcomePnl->Controls->Add(this->LogoImgPnl);
 			this->WelcomePnl->Controls->Add(this->WelcomeScreenLoginBtn);
 			this->WelcomePnl->Controls->Add(this->WelcomeScreenRegBtn);
@@ -132,13 +138,27 @@ namespace CVBuilder {
 			this->WelcomePnl->Size = System::Drawing::Size(331, 355);
 			this->WelcomePnl->TabIndex = 0;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Red;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::Black;
+			this->button1->Location = System::Drawing::Point(94, 311);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(136, 38);
+			this->button1->TabIndex = 12;
+			this->button1->Text = L"ABOUT";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
 			// LogoImgPnl
 			// 
 			this->LogoImgPnl->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LogoImgPnl.BackgroundImage")));
 			this->LogoImgPnl->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->LogoImgPnl->Location = System::Drawing::Point(94, 88);
 			this->LogoImgPnl->Name = L"LogoImgPnl";
-			this->LogoImgPnl->Size = System::Drawing::Size(132, 82);
+			this->LogoImgPnl->Size = System::Drawing::Size(136, 82);
 			this->LogoImgPnl->TabIndex = 3;
 			// 
 			// WelcomeScreenLoginBtn
@@ -148,7 +168,7 @@ namespace CVBuilder {
 			this->WelcomeScreenLoginBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->WelcomeScreenLoginBtn->ForeColor = System::Drawing::Color::Black;
-			this->WelcomeScreenLoginBtn->Location = System::Drawing::Point(94, 219);
+			this->WelcomeScreenLoginBtn->Location = System::Drawing::Point(94, 200);
 			this->WelcomeScreenLoginBtn->Name = L"WelcomeScreenLoginBtn";
 			this->WelcomeScreenLoginBtn->Size = System::Drawing::Size(138, 38);
 			this->WelcomeScreenLoginBtn->TabIndex = 1;
@@ -162,7 +182,7 @@ namespace CVBuilder {
 			this->WelcomeScreenRegBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->WelcomeScreenRegBtn->ForeColor = System::Drawing::Color::Black;
-			this->WelcomeScreenRegBtn->Location = System::Drawing::Point(94, 312);
+			this->WelcomeScreenRegBtn->Location = System::Drawing::Point(94, 255);
 			this->WelcomeScreenRegBtn->Name = L"WelcomeScreenRegBtn";
 			this->WelcomeScreenRegBtn->Size = System::Drawing::Size(138, 38);
 			this->WelcomeScreenRegBtn->TabIndex = 2;
@@ -176,7 +196,7 @@ namespace CVBuilder {
 			this->WelcomeLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->WelcomeLbl->ForeColor = System::Drawing::Color::Black;
-			this->WelcomeLbl->Location = System::Drawing::Point(87, 24);
+			this->WelcomeLbl->Location = System::Drawing::Point(89, 23);
 			this->WelcomeLbl->Name = L"WelcomeLbl";
 			this->WelcomeLbl->Size = System::Drawing::Size(145, 37);
 			this->WelcomeLbl->TabIndex = 0;
@@ -314,6 +334,7 @@ namespace CVBuilder {
 			this->LoginPnl->Name = L"LoginPnl";
 			this->LoginPnl->Size = System::Drawing::Size(280, 428);
 			this->LoginPnl->TabIndex = 1;
+			this->LoginPnl->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::LoginPnl_Paint);
 			// 
 			// LoginScreenPasswordLbl
 			// 
@@ -414,13 +435,14 @@ namespace CVBuilder {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(928, 534);
 			this->Controls->Add(this->VersionLbl);
+			this->Controls->Add(this->WelcomePnl);
 			this->Controls->Add(this->RegisterPnl);
 			this->Controls->Add(this->LoginPnl);
-			this->Controls->Add(this->WelcomePnl);
 			this->ForeColor = System::Drawing::Color::White;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::SizableToolWindow;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->WelcomePnl->ResumeLayout(false);
 			this->WelcomePnl->PerformLayout();
 			this->RegisterPnl->ResumeLayout(false);
@@ -439,6 +461,12 @@ private: System::Void LoginScreenLoginBtn_Click(System::Object^ sender, System::
 private: System::Void RegisterScreenRegBtn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void RegisterScreenBackBtn_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void WelcomeScreenRegBtn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void LoginPnl_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	
+}
 };
 }

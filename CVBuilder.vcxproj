@@ -133,15 +133,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CategoryBox.cpp" />
+    <ClCompile Include="CreateCv.cpp" />
     <ClCompile Include="EducationWorkExpProjects.cpp" />
+    <ClCompile Include="GeneralPage.cpp" />
     <ClCompile Include="ListOfCVsForm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="PersonalDetails.cpp" />
     <ClCompile Include="SelectTemplateForm.cpp" />
+    <ClCompile Include="Skills.cpp" />
+    <ClCompile Include="Template1.cpp" />
+    <ClCompile Include="Template2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CategoryBox.h" />
+    <ClInclude Include="CreateCv.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="EducationWorkExpProjects.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GeneralPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ListOfCVsForm.h">
@@ -150,13 +163,34 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PersonalDetails.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="SelectTemplateForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Skills.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Template1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Template2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CreateCv.resx">
+      <DependentUpon>CreateCv.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EducationWorkExpProjects.resx">
       <DependentUpon>EducationWorkExpProjects.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralPage.resx">
+      <DependentUpon>GeneralPage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListOfCVsForm.resx">
       <DependentUpon>ListOfCVsForm.h</DependentUpon>
@@ -164,8 +198,23 @@
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm1.resx">
+      <DependentUpon>MyForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalDetails.resx">
+      <DependentUpon>PersonalDetails.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectTemplateForm.resx">
       <DependentUpon>SelectTemplateForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skills.resx">
+      <DependentUpon>Skills.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template1.resx">
+      <DependentUpon>Template1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template2.resx">
+      <DependentUpon>Template2.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
