@@ -1,0 +1,7 @@
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.vcxproj.AssemblyReference.cache
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.vcxproj.GenerateResource.cache
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.EducationWorkExpProjects.resources
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.ListOfCVsForm.resources
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.SelectTemplateForm.resources
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.vcxproj.CopyComplete
+C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.MyForm.resources
