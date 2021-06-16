@@ -5,3 +5,24 @@ C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.ListOfCVsForm.
 C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.SelectTemplateForm.resources
 C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.vcxproj.CopyComplete
 C:\Users\Student\source\repos\CVBuilder\CVBuilder\Debug\CVBuilder.MyForm.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.vcxproj.AssemblyReference.cache
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.EducationWorkExpProjects.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.ListOfCVsForm.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.MyForm.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.SelectTemplateForm.resources
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.vcxproj.GenerateResource.cache
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.vcxproj.CopyComplete
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.exe
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\MySql.Data.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\Google.Protobuf.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\Zstandard.Net.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\BouncyCastle.Crypto.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\Ubiety.Dns.Core.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\System.Memory.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\System.Buffers.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\K4os.Compression.LZ4.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\K4os.Hash.xxHash.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\System.Numerics.Vectors.dll
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\MySql.Data.xml

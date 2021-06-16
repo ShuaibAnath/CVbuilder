@@ -1,3 +1,12 @@
 ﻿  CategoryBox.cpp
+  EducationWorkExpProjects.cpp
+  ListOfCVsForm.cpp
+  main.cpp
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\main.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  MyForm.cpp
+C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\MyForm.cpp(92,20): warning C4101: 'ex': unreferenced local variable
+  SelectTemplateForm.cpp
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Generating Code...
   CategoryBox.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  CVBuilder.vcxproj -> C:\Users\Student\source\repos\CVBuilder\Debug\CVBuilder.exe
+  CVBuilder.vcxproj -> C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.exe
