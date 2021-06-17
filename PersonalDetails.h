@@ -28,6 +28,14 @@ namespace CVBuilder {
 			//TODO: Add the constructor code here
 			//
 		}
+		PersonalDetails(String^ emailInTxtbox)
+		{
+			InitializeComponent();
+			PDEmailTxtBox->Text = emailInTxtbox;
+			//
+			//TODO: Add the constructor code here
+			//
+		}
 
 	protected:
 		/// <summary>
@@ -113,8 +121,10 @@ namespace CVBuilder {
 			// PDEmailTxtBox
 			// 
 			this->PDEmailTxtBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->PDEmailTxtBox->Enabled = false;
 			this->PDEmailTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->PDEmailTxtBox->ForeColor = System::Drawing::Color::Black;
 			this->PDEmailTxtBox->Location = System::Drawing::Point(293, 190);
 			this->PDEmailTxtBox->Name = L"PDEmailTxtBox";
 			this->PDEmailTxtBox->Size = System::Drawing::Size(344, 23);

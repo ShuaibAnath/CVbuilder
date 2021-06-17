@@ -1,5 +1,10 @@
 #pragma once
 
+
+#include <string>
+#include <cstring>
+#include <msclr\marshal_cppstd.h>
+#include "User.h"
 namespace CVBuilder {
 
 	using namespace System;
@@ -29,7 +34,6 @@ namespace CVBuilder {
 			SectionHeadingLbl->Text = Heading;
 			UniCompanyProjLbl->Text = UniCompProj;
 			DegreeProfessionProjNameLbl->Text = DegWorkExpProjName;
-			DurationLbl->Text = Duration;
 			SummaryLbl->Text = Summary;
 
 		}
@@ -61,7 +65,7 @@ namespace CVBuilder {
 	private: System::Windows::Forms::Label^ UniCompanyProjLbl;
 	private: System::Windows::Forms::Label^ SummaryLbl;
 
-	private: System::Windows::Forms::Label^ DurationLbl;
+
 
 
 	protected:
@@ -74,6 +78,11 @@ namespace CVBuilder {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ numberofRecordsLbl;
+	private: System::Windows::Forms::Button^ EduWorkExpProjBackBtn;
+
+		   msclr::interop::marshal_context context;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -94,9 +103,11 @@ namespace CVBuilder {
 			this->SummaryRichTxtBox = (gcnew System::Windows::Forms::RichTextBox());
 			this->SectionInstancePnl = (gcnew System::Windows::Forms::Panel());
 			this->SummaryLbl = (gcnew System::Windows::Forms::Label());
-			this->DurationLbl = (gcnew System::Windows::Forms::Label());
 			this->DegreeProfessionProjNameLbl = (gcnew System::Windows::Forms::Label());
 			this->UniCompanyProjLbl = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->numberofRecordsLbl = (gcnew System::Windows::Forms::Label());
+			this->EduWorkExpProjBackBtn = (gcnew System::Windows::Forms::Button());
 			this->SectionHeadingPnl->SuspendLayout();
 			this->SectionInstancePnl->SuspendLayout();
 			this->SuspendLayout();
@@ -116,7 +127,7 @@ namespace CVBuilder {
 			this->SectionHeadingLbl->BackColor = System::Drawing::Color::Transparent;
 			this->SectionHeadingLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->SectionHeadingLbl->Location = System::Drawing::Point(19, 0);
+			this->SectionHeadingLbl->Location = System::Drawing::Point(386, 4);
 			this->SectionHeadingLbl->Name = L"SectionHeadingLbl";
 			this->SectionHeadingLbl->Size = System::Drawing::Size(154, 21);
 			this->SectionHeadingLbl->TabIndex = 0;
@@ -129,19 +140,20 @@ namespace CVBuilder {
 			this->AddInstanceBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AddInstanceBtn->ForeColor = System::Drawing::Color::Black;
-			this->AddInstanceBtn->Location = System::Drawing::Point(399, 440);
+			this->AddInstanceBtn->Location = System::Drawing::Point(392, 445);
 			this->AddInstanceBtn->Name = L"AddInstanceBtn";
-			this->AddInstanceBtn->Size = System::Drawing::Size(123, 38);
+			this->AddInstanceBtn->Size = System::Drawing::Size(151, 38);
 			this->AddInstanceBtn->TabIndex = 6;
-			this->AddInstanceBtn->Text = L"ADD";
+			this->AddInstanceBtn->Text = L"ADD TO CV";
 			this->AddInstanceBtn->UseVisualStyleBackColor = false;
+			this->AddInstanceBtn->Click += gcnew System::EventHandler(this, &EducationWorkExpProjects::AddInstanceBtn_Click);
 			// 
 			// VersionLbl
 			// 
 			this->VersionLbl->AutoSize = true;
 			this->VersionLbl->BackColor = System::Drawing::Color::DimGray;
 			this->VersionLbl->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->VersionLbl->Location = System::Drawing::Point(423, 491);
+			this->VersionLbl->Location = System::Drawing::Point(837, 499);
 			this->VersionLbl->Name = L"VersionLbl";
 			this->VersionLbl->Size = System::Drawing::Size(60, 13);
 			this->VersionLbl->TabIndex = 13;
@@ -203,7 +215,6 @@ namespace CVBuilder {
 			// 
 			this->SectionInstancePnl->BackColor = System::Drawing::Color::Red;
 			this->SectionInstancePnl->Controls->Add(this->SummaryLbl);
-			this->SectionInstancePnl->Controls->Add(this->DurationLbl);
 			this->SectionInstancePnl->Controls->Add(this->DegreeProfessionProjNameLbl);
 			this->SectionInstancePnl->Controls->Add(this->UniCompanyProjLbl);
 			this->SectionInstancePnl->Controls->Add(this->SummaryRichTxtBox);
@@ -227,17 +238,6 @@ namespace CVBuilder {
 			this->SummaryLbl->TabIndex = 7;
 			this->SummaryLbl->Text = L"Degree/Profession/Project Name";
 			// 
-			// DurationLbl
-			// 
-			this->DurationLbl->AutoSize = true;
-			this->DurationLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->DurationLbl->Location = System::Drawing::Point(17, 146);
-			this->DurationLbl->Name = L"DurationLbl";
-			this->DurationLbl->Size = System::Drawing::Size(209, 17);
-			this->DurationLbl->TabIndex = 6;
-			this->DurationLbl->Text = L"Degree/Profession/Project Name";
-			// 
 			// DegreeProfessionProjNameLbl
 			// 
 			this->DegreeProfessionProjNameLbl->AutoSize = true;
@@ -260,6 +260,43 @@ namespace CVBuilder {
 			this->UniCompanyProjLbl->TabIndex = 1;
 			this->UniCompanyProjLbl->Text = L"UNI/COMP/Proj";
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::White;
+			this->label1->ForeColor = System::Drawing::Color::Red;
+			this->label1->Location = System::Drawing::Point(423, 499);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(223, 13);
+			this->label1->TabIndex = 14;
+			this->label1->Text = L"Max amount of records that can be added = 2";
+			// 
+			// numberofRecordsLbl
+			// 
+			this->numberofRecordsLbl->AutoSize = true;
+			this->numberofRecordsLbl->BackColor = System::Drawing::Color::White;
+			this->numberofRecordsLbl->ForeColor = System::Drawing::Color::Red;
+			this->numberofRecordsLbl->Location = System::Drawing::Point(272, 499);
+			this->numberofRecordsLbl->Name = L"numberofRecordsLbl";
+			this->numberofRecordsLbl->Size = System::Drawing::Size(145, 13);
+			this->numberofRecordsLbl->TabIndex = 15;
+			this->numberofRecordsLbl->Text = L"Number of records added = 0";
+			// 
+			// EduWorkExpProjBackBtn
+			// 
+			this->EduWorkExpProjBackBtn->BackColor = System::Drawing::Color::IndianRed;
+			this->EduWorkExpProjBackBtn->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->EduWorkExpProjBackBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->EduWorkExpProjBackBtn->ForeColor = System::Drawing::Color::Black;
+			this->EduWorkExpProjBackBtn->Location = System::Drawing::Point(12, 484);
+			this->EduWorkExpProjBackBtn->Name = L"EduWorkExpProjBackBtn";
+			this->EduWorkExpProjBackBtn->Size = System::Drawing::Size(119, 38);
+			this->EduWorkExpProjBackBtn->TabIndex = 16;
+			this->EduWorkExpProjBackBtn->Text = L"BACK";
+			this->EduWorkExpProjBackBtn->UseVisualStyleBackColor = false;
+			this->EduWorkExpProjBackBtn->Click += gcnew System::EventHandler(this, &EducationWorkExpProjects::EduWorkExpProjBackBtn_Click);
+			// 
 			// EducationWorkExpProjects
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -267,6 +304,9 @@ namespace CVBuilder {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(928, 534);
+			this->Controls->Add(this->EduWorkExpProjBackBtn);
+			this->Controls->Add(this->numberofRecordsLbl);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->VersionLbl);
 			this->Controls->Add(this->AddInstanceBtn);
 			this->Controls->Add(this->SectionInstancePnl);
@@ -284,6 +324,8 @@ namespace CVBuilder {
 
 		}
 #pragma endregion
-	private: System::Void EducationWorkExpProjects_Load(System::Object^ sender, System::EventArgs^ e){}
+private: System::Void EducationWorkExpProjects_Load(System::Object^ sender, System::EventArgs^ e){}
+private: System::Void AddInstanceBtn_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void EduWorkExpProjBackBtn_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

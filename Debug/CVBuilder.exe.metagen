@@ -134,6 +134,7 @@ Assembly System.Xml.XmlSerializer, Version=4.0.10.0, Culture=neutral, PublicKeyT
 	hash=None, flags=None
 Class CVBuilder.PersonalDetails: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class CVBuilder.Skills: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form

@@ -1,1 +1,16 @@
-﻿  CVBuilder.vcxproj -> C:\Users\Student\source\repos\CVBuilderGit\CVbuilder\Debug\CVBuilder.exe
+﻿  CreateCv.cpp
+  EducationWorkExpProjects.cpp
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\EducationWorkExpProjects.cpp(53,21): warning C4101: 'ex': unreferenced local variable
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\EducationWorkExpProjects.cpp(79,21): warning C4101: 'ex': unreferenced local variable
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\EducationWorkExpProjects.cpp(105,21): warning C4101: 'ex': unreferenced local variable
+  GeneralPage.cpp
+  MyForm.cpp
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\MyForm.cpp(96,20): warning C4101: 'ex': unreferenced local variable
+  PersonalDetails.cpp
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\PersonalDetails.cpp(50,21): warning C4101: 'ex': unreferenced local variable
+  Skills.cpp
+  main.cpp
+C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\main.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Generating Code...
+  CategoryBox.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  CVBuilder.vcxproj -> C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\Debug\CVBuilder.exe

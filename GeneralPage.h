@@ -2,6 +2,7 @@
 #include "PersonalDetails.h"
 #include "Skills.h"
 #include "EducationWorkExpProjects.h"
+#include "CategoryBox.h"
 
 namespace CVBuilder {
 
@@ -25,7 +26,8 @@ namespace CVBuilder {
 			//TODO: Add the constructor code here
 			//
 		}
-
+	private: System::Windows::Forms::Button^ NextBtn;
+	
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -55,6 +57,8 @@ namespace CVBuilder {
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
+		//arrays of objects to store user CV information
+
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
@@ -71,6 +75,7 @@ namespace CVBuilder {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->ListOfCVsPnl = (gcnew System::Windows::Forms::Panel());
 			this->ListOfCVsLbl = (gcnew System::Windows::Forms::Label());
+			this->NextBtn = (gcnew System::Windows::Forms::Button());
 			this->ListOfCVsPnl->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -173,12 +178,27 @@ namespace CVBuilder {
 			this->ListOfCVsLbl->TabIndex = 0;
 			this->ListOfCVsLbl->Text = L"CV INORMATION";
 			// 
+			// NextBtn
+			// 
+			this->NextBtn->BackColor = System::Drawing::Color::IndianRed;
+			this->NextBtn->FlatAppearance->BorderColor = System::Drawing::Color::Black;
+			this->NextBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->NextBtn->ForeColor = System::Drawing::Color::Black;
+			this->NextBtn->Location = System::Drawing::Point(797, 484);
+			this->NextBtn->Name = L"NextBtn";
+			this->NextBtn->Size = System::Drawing::Size(119, 38);
+			this->NextBtn->TabIndex = 8;
+			this->NextBtn->Text = L"NEXT";
+			this->NextBtn->UseVisualStyleBackColor = false;
+			// 
 			// GeneralPage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(928, 534);
+			this->Controls->Add(this->NextBtn);
 			this->Controls->Add(this->ListOfCVsPnl);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->button5);

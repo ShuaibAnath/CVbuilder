@@ -3,7 +3,6 @@
 #include "CreateCv.h"
 #include "MyForm1.h"
 
-
 //
 //TODO: import cv information
 //

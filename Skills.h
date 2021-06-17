@@ -1,5 +1,5 @@
 #pragma once
-
+#include "GeneralPage.h"
 
 namespace CVBuilder {
 
@@ -38,14 +38,22 @@ namespace CVBuilder {
 
 	protected:
 	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::RichTextBox^ richTextBox1;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::RichTextBox^ SkillDesciptionrichTxtBox;
+	private: System::Windows::Forms::ComboBox^ skillscmbBox;
 
-	private: System::Windows::Forms::Button^ button2;
+
+	private: System::Windows::Forms::TextBox^ skillNameTxtBox;
+	private: System::Windows::Forms::Button^ addSkillBtn;
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Panel^ ListOfCVsPnl;
 	private: System::Windows::Forms::Label^ SkillsLbl;
+	private: System::Windows::Forms::Label^ numberofRecordsLbl;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
 
 
 	private:
@@ -63,13 +71,17 @@ namespace CVBuilder {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Skills::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->SkillDesciptionrichTxtBox = (gcnew System::Windows::Forms::RichTextBox());
+			this->skillscmbBox = (gcnew System::Windows::Forms::ComboBox());
+			this->skillNameTxtBox = (gcnew System::Windows::Forms::TextBox());
+			this->addSkillBtn = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->ListOfCVsPnl = (gcnew System::Windows::Forms::Panel());
 			this->SkillsLbl = (gcnew System::Windows::Forms::Label());
+			this->numberofRecordsLbl = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->ListOfCVsPnl->SuspendLayout();
 			this->SuspendLayout();
@@ -78,62 +90,85 @@ namespace CVBuilder {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::Red;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->panel1->Controls->Add(this->richTextBox1);
-			this->panel1->Controls->Add(this->comboBox1);
-			this->panel1->Controls->Add(this->textBox2);
+			this->panel1->Controls->Add(this->label3);
+			this->panel1->Controls->Add(this->label2);
+			this->panel1->Controls->Add(this->SkillDesciptionrichTxtBox);
+			this->panel1->Controls->Add(this->skillscmbBox);
+			this->panel1->Controls->Add(this->skillNameTxtBox);
 			this->panel1->Location = System::Drawing::Point(289, 113);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(346, 268);
 			this->panel1->TabIndex = 3;
 			// 
-			// richTextBox1
+			// label3
 			// 
-			this->richTextBox1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->richTextBox1->Location = System::Drawing::Point(17, 113);
-			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(309, 125);
-			this->richTextBox1->TabIndex = 2;
-			this->richTextBox1->Text = L"SKILL DESCRIPTION";
+			this->label3->Location = System::Drawing::Point(14, 140);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(137, 17);
+			this->label3->TabIndex = 3;
+			this->label3->Text = L"SKILL DESCRIPTION :";
 			// 
-			// comboBox1
+			// label2
 			// 
-			this->comboBox1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"1", L"2", L"3", L"4", L"5" });
-			this->comboBox1->Location = System::Drawing::Point(115, 69);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 23);
-			this->comboBox1->TabIndex = 1;
-			this->comboBox1->Text = L"SKILL RATING";
+			this->label2->Location = System::Drawing::Point(14, 9);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(91, 17);
+			this->label2->TabIndex = 1;
+			this->label2->Text = L"SKILL NAME :";
 			// 
-			// textBox2
+			// SkillDesciptionrichTxtBox
 			// 
-			this->textBox2->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->SkillDesciptionrichTxtBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->SkillDesciptionrichTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(17, 22);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(309, 23);
-			this->textBox2->TabIndex = 0;
-			this->textBox2->Text = L"SKILL NAME";
-			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->SkillDesciptionrichTxtBox->Location = System::Drawing::Point(17, 160);
+			this->SkillDesciptionrichTxtBox->Name = L"SkillDesciptionrichTxtBox";
+			this->SkillDesciptionrichTxtBox->Size = System::Drawing::Size(309, 92);
+			this->SkillDesciptionrichTxtBox->TabIndex = 2;
+			this->SkillDesciptionrichTxtBox->Text = L"";
 			// 
-			// button2
+			// skillscmbBox
 			// 
-			this->button2->BackColor = System::Drawing::Color::Red;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->skillscmbBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->skillscmbBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(361, 402);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(197, 53);
-			this->button2->TabIndex = 5;
-			this->button2->Text = L"ADD SKILL TO CV";
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Skills::button2_Click);
+			this->skillscmbBox->FormattingEnabled = true;
+			this->skillscmbBox->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"1", L"2", L"3", L"4", L"5" });
+			this->skillscmbBox->Location = System::Drawing::Point(113, 79);
+			this->skillscmbBox->Name = L"skillscmbBox";
+			this->skillscmbBox->Size = System::Drawing::Size(121, 23);
+			this->skillscmbBox->TabIndex = 1;
+			this->skillscmbBox->Text = L"SKILL RATING";
+			// 
+			// skillNameTxtBox
+			// 
+			this->skillNameTxtBox->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->skillNameTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->skillNameTxtBox->Location = System::Drawing::Point(17, 29);
+			this->skillNameTxtBox->Name = L"skillNameTxtBox";
+			this->skillNameTxtBox->Size = System::Drawing::Size(309, 23);
+			this->skillNameTxtBox->TabIndex = 0;
+			this->skillNameTxtBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// addSkillBtn
+			// 
+			this->addSkillBtn->BackColor = System::Drawing::Color::Red;
+			this->addSkillBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->addSkillBtn->Location = System::Drawing::Point(364, 408);
+			this->addSkillBtn->Name = L"addSkillBtn";
+			this->addSkillBtn->Size = System::Drawing::Size(197, 53);
+			this->addSkillBtn->TabIndex = 5;
+			this->addSkillBtn->Text = L"ADD SKILL TO CV";
+			this->addSkillBtn->UseVisualStyleBackColor = false;
+			this->addSkillBtn->Click += gcnew System::EventHandler(this, &Skills::addSkillBtn_Click);
 			// 
 			// textBox3
 			// 
@@ -141,7 +176,7 @@ namespace CVBuilder {
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->Location = System::Drawing::Point(386, 507);
+			this->textBox3->Location = System::Drawing::Point(764, 507);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
 			this->textBox3->Size = System::Drawing::Size(152, 15);
@@ -169,15 +204,39 @@ namespace CVBuilder {
 			this->SkillsLbl->TabIndex = 0;
 			this->SkillsLbl->Text = L"SKILLS";
 			// 
+			// numberofRecordsLbl
+			// 
+			this->numberofRecordsLbl->AutoSize = true;
+			this->numberofRecordsLbl->BackColor = System::Drawing::Color::White;
+			this->numberofRecordsLbl->ForeColor = System::Drawing::Color::Red;
+			this->numberofRecordsLbl->Location = System::Drawing::Point(282, 489);
+			this->numberofRecordsLbl->Name = L"numberofRecordsLbl";
+			this->numberofRecordsLbl->Size = System::Drawing::Size(145, 13);
+			this->numberofRecordsLbl->TabIndex = 17;
+			this->numberofRecordsLbl->Text = L"Number of records added = 0";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::White;
+			this->label1->ForeColor = System::Drawing::Color::Red;
+			this->label1->Location = System::Drawing::Point(433, 489);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(223, 13);
+			this->label1->TabIndex = 16;
+			this->label1->Text = L"Max amount of records that can be added = 2";
+			// 
 			// Skills
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(928, 534);
+			this->Controls->Add(this->numberofRecordsLbl);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->ListOfCVsPnl);
 			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->button2);
+			this->Controls->Add(this->addSkillBtn);
 			this->Controls->Add(this->panel1);
 			this->Name = L"Skills";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -193,8 +252,6 @@ namespace CVBuilder {
 		}
 #pragma endregion
 	private: System::Void Skills_Load(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
-
-	};
+	private: System::Void addSkillBtn_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
