@@ -23,6 +23,17 @@ namespace CVBuilder {
 			//
 		}
 
+		EducationWorkExpProjects(System::String^ Heading, System::String^ UniCompProj, System::String^ DegWorkExpProjName, System::String^ Duration, System::String^ Summary)
+		{
+			InitializeComponent();
+			SectionHeadingLbl->Text = Heading;
+			UniCompanyProjLbl->Text = UniCompProj;
+			DegreeProfessionProjNameLbl->Text = DegWorkExpProjName;
+			DurationLbl->Text = Duration;
+			SummaryLbl->Text = Summary;
+
+		}
+
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -36,15 +47,21 @@ namespace CVBuilder {
 		}
 	private: System::Windows::Forms::Panel^ SectionHeadingPnl;
 	private: System::Windows::Forms::Label^ SectionHeadingLbl;
-	private: System::Windows::Forms::Panel^ SectionInstancePnl;
-	private: System::Windows::Forms::TextBox^ DegreeProfessionProjNameTxtBox;
-	private: System::Windows::Forms::TextBox^ UniCompanyProjTxtBox;
-	private: System::Windows::Forms::ComboBox^ EndYearCmbBox;
-	private: System::Windows::Forms::ComboBox^ StartYearCmbBox;
-	private: System::Windows::Forms::RichTextBox^ SummaryRichTxtBox;
-	private: System::Windows::Forms::Button^ RemoveInstanceBtn;
+
 	private: System::Windows::Forms::Button^ AddInstanceBtn;
 	private: System::Windows::Forms::Label^ VersionLbl;
+	private: System::Windows::Forms::TextBox^ UniCompanyProjTxtBox;
+	private: System::Windows::Forms::TextBox^ DegreeProfessionProjNameTxtBox;
+	private: System::Windows::Forms::ComboBox^ StartYearCmbBox;
+	private: System::Windows::Forms::ComboBox^ EndYearCmbBox;
+	private: System::Windows::Forms::RichTextBox^ SummaryRichTxtBox;
+	private: System::Windows::Forms::Panel^ SectionInstancePnl;
+	private: System::Windows::Forms::Label^ DegreeProfessionProjNameLbl;
+
+	private: System::Windows::Forms::Label^ UniCompanyProjLbl;
+	private: System::Windows::Forms::Label^ SummaryLbl;
+
+	private: System::Windows::Forms::Label^ DurationLbl;
 
 
 	protected:
@@ -68,15 +85,18 @@ namespace CVBuilder {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EducationWorkExpProjects::typeid));
 			this->SectionHeadingPnl = (gcnew System::Windows::Forms::Panel());
 			this->SectionHeadingLbl = (gcnew System::Windows::Forms::Label());
-			this->SectionInstancePnl = (gcnew System::Windows::Forms::Panel());
-			this->SummaryRichTxtBox = (gcnew System::Windows::Forms::RichTextBox());
-			this->EndYearCmbBox = (gcnew System::Windows::Forms::ComboBox());
-			this->StartYearCmbBox = (gcnew System::Windows::Forms::ComboBox());
-			this->DegreeProfessionProjNameTxtBox = (gcnew System::Windows::Forms::TextBox());
-			this->UniCompanyProjTxtBox = (gcnew System::Windows::Forms::TextBox());
-			this->RemoveInstanceBtn = (gcnew System::Windows::Forms::Button());
 			this->AddInstanceBtn = (gcnew System::Windows::Forms::Button());
 			this->VersionLbl = (gcnew System::Windows::Forms::Label());
+			this->UniCompanyProjTxtBox = (gcnew System::Windows::Forms::TextBox());
+			this->DegreeProfessionProjNameTxtBox = (gcnew System::Windows::Forms::TextBox());
+			this->StartYearCmbBox = (gcnew System::Windows::Forms::ComboBox());
+			this->EndYearCmbBox = (gcnew System::Windows::Forms::ComboBox());
+			this->SummaryRichTxtBox = (gcnew System::Windows::Forms::RichTextBox());
+			this->SectionInstancePnl = (gcnew System::Windows::Forms::Panel());
+			this->SummaryLbl = (gcnew System::Windows::Forms::Label());
+			this->DurationLbl = (gcnew System::Windows::Forms::Label());
+			this->DegreeProfessionProjNameLbl = (gcnew System::Windows::Forms::Label());
+			this->UniCompanyProjLbl = (gcnew System::Windows::Forms::Label());
 			this->SectionHeadingPnl->SuspendLayout();
 			this->SectionInstancePnl->SuspendLayout();
 			this->SuspendLayout();
@@ -85,100 +105,22 @@ namespace CVBuilder {
 			// 
 			this->SectionHeadingPnl->BackColor = System::Drawing::Color::Red;
 			this->SectionHeadingPnl->Controls->Add(this->SectionHeadingLbl);
-			this->SectionHeadingPnl->Location = System::Drawing::Point(12, 12);
+			this->SectionHeadingPnl->Location = System::Drawing::Point(3, 12);
 			this->SectionHeadingPnl->Name = L"SectionHeadingPnl";
-			this->SectionHeadingPnl->Size = System::Drawing::Size(904, 26);
+			this->SectionHeadingPnl->Size = System::Drawing::Size(924, 25);
 			this->SectionHeadingPnl->TabIndex = 2;
 			// 
 			// SectionHeadingLbl
 			// 
 			this->SectionHeadingLbl->AutoSize = true;
-			this->SectionHeadingLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->SectionHeadingLbl->Location = System::Drawing::Point(383, 0);
+			this->SectionHeadingLbl->BackColor = System::Drawing::Color::Transparent;
+			this->SectionHeadingLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->SectionHeadingLbl->Location = System::Drawing::Point(19, 0);
 			this->SectionHeadingLbl->Name = L"SectionHeadingLbl";
-			this->SectionHeadingLbl->Size = System::Drawing::Size(149, 21);
+			this->SectionHeadingLbl->Size = System::Drawing::Size(154, 21);
 			this->SectionHeadingLbl->TabIndex = 0;
 			this->SectionHeadingLbl->Text = L"SECTION HEADING";
-			// 
-			// SectionInstancePnl
-			// 
-			this->SectionInstancePnl->BackColor = System::Drawing::Color::Red;
-			this->SectionInstancePnl->Controls->Add(this->SummaryRichTxtBox);
-			this->SectionInstancePnl->Controls->Add(this->EndYearCmbBox);
-			this->SectionInstancePnl->Controls->Add(this->StartYearCmbBox);
-			this->SectionInstancePnl->Controls->Add(this->DegreeProfessionProjNameTxtBox);
-			this->SectionInstancePnl->Controls->Add(this->UniCompanyProjTxtBox);
-			this->SectionInstancePnl->Location = System::Drawing::Point(308, 57);
-			this->SectionInstancePnl->Name = L"SectionInstancePnl";
-			this->SectionInstancePnl->Size = System::Drawing::Size(319, 332);
-			this->SectionInstancePnl->TabIndex = 3;
-			// 
-			// SummaryRichTxtBox
-			// 
-			this->SummaryRichTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->SummaryRichTxtBox->Location = System::Drawing::Point(20, 187);
-			this->SummaryRichTxtBox->Name = L"SummaryRichTxtBox";
-			this->SummaryRichTxtBox->Size = System::Drawing::Size(275, 116);
-			this->SummaryRichTxtBox->TabIndex = 4;
-			this->SummaryRichTxtBox->Text = L"SUMMARY";
-			// 
-			// EndYearCmbBox
-			// 
-			this->EndYearCmbBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->EndYearCmbBox->FormattingEnabled = true;
-			this->EndYearCmbBox->Location = System::Drawing::Point(174, 139);
-			this->EndYearCmbBox->Name = L"EndYearCmbBox";
-			this->EndYearCmbBox->Size = System::Drawing::Size(121, 25);
-			this->EndYearCmbBox->TabIndex = 3;
-			this->EndYearCmbBox->Text = L"END YEAR";
-			// 
-			// StartYearCmbBox
-			// 
-			this->StartYearCmbBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->StartYearCmbBox->FormattingEnabled = true;
-			this->StartYearCmbBox->Location = System::Drawing::Point(20, 139);
-			this->StartYearCmbBox->Name = L"StartYearCmbBox";
-			this->StartYearCmbBox->Size = System::Drawing::Size(121, 25);
-			this->StartYearCmbBox->TabIndex = 2;
-			this->StartYearCmbBox->Text = L"START YEAR";
-			// 
-			// DegreeProfessionProjNameTxtBox
-			// 
-			this->DegreeProfessionProjNameTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->DegreeProfessionProjNameTxtBox->Location = System::Drawing::Point(20, 77);
-			this->DegreeProfessionProjNameTxtBox->Name = L"DegreeProfessionProjNameTxtBox";
-			this->DegreeProfessionProjNameTxtBox->Size = System::Drawing::Size(275, 25);
-			this->DegreeProfessionProjNameTxtBox->TabIndex = 1;
-			this->DegreeProfessionProjNameTxtBox->Text = L"Degree/Profession/Project Name";
-			// 
-			// UniCompanyProjTxtBox
-			// 
-			this->UniCompanyProjTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->UniCompanyProjTxtBox->Location = System::Drawing::Point(20, 22);
-			this->UniCompanyProjTxtBox->Name = L"UniCompanyProjTxtBox";
-			this->UniCompanyProjTxtBox->Size = System::Drawing::Size(275, 25);
-			this->UniCompanyProjTxtBox->TabIndex = 0;
-			this->UniCompanyProjTxtBox->Text = L"University/Company/Project";
-			// 
-			// RemoveInstanceBtn
-			// 
-			this->RemoveInstanceBtn->BackColor = System::Drawing::Color::Red;
-			this->RemoveInstanceBtn->FlatAppearance->BorderColor = System::Drawing::Color::Black;
-			this->RemoveInstanceBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->RemoveInstanceBtn->ForeColor = System::Drawing::Color::Black;
-			this->RemoveInstanceBtn->Location = System::Drawing::Point(12, 474);
-			this->RemoveInstanceBtn->Name = L"RemoveInstanceBtn";
-			this->RemoveInstanceBtn->Size = System::Drawing::Size(123, 38);
-			this->RemoveInstanceBtn->TabIndex = 5;
-			this->RemoveInstanceBtn->Text = L"REMOVE ";
-			this->RemoveInstanceBtn->UseVisualStyleBackColor = false;
 			// 
 			// AddInstanceBtn
 			// 
@@ -187,7 +129,7 @@ namespace CVBuilder {
 			this->AddInstanceBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AddInstanceBtn->ForeColor = System::Drawing::Color::Black;
-			this->AddInstanceBtn->Location = System::Drawing::Point(772, 474);
+			this->AddInstanceBtn->Location = System::Drawing::Point(399, 440);
 			this->AddInstanceBtn->Name = L"AddInstanceBtn";
 			this->AddInstanceBtn->Size = System::Drawing::Size(123, 38);
 			this->AddInstanceBtn->TabIndex = 6;
@@ -205,6 +147,119 @@ namespace CVBuilder {
 			this->VersionLbl->TabIndex = 13;
 			this->VersionLbl->Text = L"Version 1.0";
 			// 
+			// UniCompanyProjTxtBox
+			// 
+			this->UniCompanyProjTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->UniCompanyProjTxtBox->ForeColor = System::Drawing::Color::Black;
+			this->UniCompanyProjTxtBox->Location = System::Drawing::Point(20, 37);
+			this->UniCompanyProjTxtBox->Name = L"UniCompanyProjTxtBox";
+			this->UniCompanyProjTxtBox->Size = System::Drawing::Size(275, 25);
+			this->UniCompanyProjTxtBox->TabIndex = 0;
+			// 
+			// DegreeProfessionProjNameTxtBox
+			// 
+			this->DegreeProfessionProjNameTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->DegreeProfessionProjNameTxtBox->ForeColor = System::Drawing::Color::Black;
+			this->DegreeProfessionProjNameTxtBox->Location = System::Drawing::Point(20, 108);
+			this->DegreeProfessionProjNameTxtBox->Name = L"DegreeProfessionProjNameTxtBox";
+			this->DegreeProfessionProjNameTxtBox->Size = System::Drawing::Size(275, 25);
+			this->DegreeProfessionProjNameTxtBox->TabIndex = 1;
+			// 
+			// StartYearCmbBox
+			// 
+			this->StartYearCmbBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->StartYearCmbBox->FormattingEnabled = true;
+			this->StartYearCmbBox->Location = System::Drawing::Point(19, 166);
+			this->StartYearCmbBox->Name = L"StartYearCmbBox";
+			this->StartYearCmbBox->Size = System::Drawing::Size(121, 25);
+			this->StartYearCmbBox->TabIndex = 2;
+			this->StartYearCmbBox->Text = L"START YEAR";
+			// 
+			// EndYearCmbBox
+			// 
+			this->EndYearCmbBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->EndYearCmbBox->FormattingEnabled = true;
+			this->EndYearCmbBox->Location = System::Drawing::Point(174, 166);
+			this->EndYearCmbBox->Name = L"EndYearCmbBox";
+			this->EndYearCmbBox->Size = System::Drawing::Size(121, 25);
+			this->EndYearCmbBox->TabIndex = 3;
+			this->EndYearCmbBox->Text = L"END YEAR";
+			// 
+			// SummaryRichTxtBox
+			// 
+			this->SummaryRichTxtBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->SummaryRichTxtBox->Location = System::Drawing::Point(20, 236);
+			this->SummaryRichTxtBox->Name = L"SummaryRichTxtBox";
+			this->SummaryRichTxtBox->Size = System::Drawing::Size(275, 116);
+			this->SummaryRichTxtBox->TabIndex = 4;
+			this->SummaryRichTxtBox->Text = L"";
+			// 
+			// SectionInstancePnl
+			// 
+			this->SectionInstancePnl->BackColor = System::Drawing::Color::Red;
+			this->SectionInstancePnl->Controls->Add(this->SummaryLbl);
+			this->SectionInstancePnl->Controls->Add(this->DurationLbl);
+			this->SectionInstancePnl->Controls->Add(this->DegreeProfessionProjNameLbl);
+			this->SectionInstancePnl->Controls->Add(this->UniCompanyProjLbl);
+			this->SectionInstancePnl->Controls->Add(this->SummaryRichTxtBox);
+			this->SectionInstancePnl->Controls->Add(this->EndYearCmbBox);
+			this->SectionInstancePnl->Controls->Add(this->StartYearCmbBox);
+			this->SectionInstancePnl->Controls->Add(this->DegreeProfessionProjNameTxtBox);
+			this->SectionInstancePnl->Controls->Add(this->UniCompanyProjTxtBox);
+			this->SectionInstancePnl->Location = System::Drawing::Point(308, 57);
+			this->SectionInstancePnl->Name = L"SectionInstancePnl";
+			this->SectionInstancePnl->Size = System::Drawing::Size(314, 366);
+			this->SectionInstancePnl->TabIndex = 3;
+			// 
+			// SummaryLbl
+			// 
+			this->SummaryLbl->AutoSize = true;
+			this->SummaryLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->SummaryLbl->Location = System::Drawing::Point(17, 216);
+			this->SummaryLbl->Name = L"SummaryLbl";
+			this->SummaryLbl->Size = System::Drawing::Size(209, 17);
+			this->SummaryLbl->TabIndex = 7;
+			this->SummaryLbl->Text = L"Degree/Profession/Project Name";
+			// 
+			// DurationLbl
+			// 
+			this->DurationLbl->AutoSize = true;
+			this->DurationLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->DurationLbl->Location = System::Drawing::Point(17, 146);
+			this->DurationLbl->Name = L"DurationLbl";
+			this->DurationLbl->Size = System::Drawing::Size(209, 17);
+			this->DurationLbl->TabIndex = 6;
+			this->DurationLbl->Text = L"Degree/Profession/Project Name";
+			// 
+			// DegreeProfessionProjNameLbl
+			// 
+			this->DegreeProfessionProjNameLbl->AutoSize = true;
+			this->DegreeProfessionProjNameLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->DegreeProfessionProjNameLbl->Location = System::Drawing::Point(16, 84);
+			this->DegreeProfessionProjNameLbl->Name = L"DegreeProfessionProjNameLbl";
+			this->DegreeProfessionProjNameLbl->Size = System::Drawing::Size(209, 17);
+			this->DegreeProfessionProjNameLbl->TabIndex = 5;
+			this->DegreeProfessionProjNameLbl->Text = L"Degree/Profession/Project Name";
+			// 
+			// UniCompanyProjLbl
+			// 
+			this->UniCompanyProjLbl->AutoSize = true;
+			this->UniCompanyProjLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->UniCompanyProjLbl->Location = System::Drawing::Point(17, 21);
+			this->UniCompanyProjLbl->Name = L"UniCompanyProjLbl";
+			this->UniCompanyProjLbl->Size = System::Drawing::Size(103, 17);
+			this->UniCompanyProjLbl->TabIndex = 1;
+			this->UniCompanyProjLbl->Text = L"UNI/COMP/Proj";
+			// 
 			// EducationWorkExpProjects
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -214,7 +269,6 @@ namespace CVBuilder {
 			this->ClientSize = System::Drawing::Size(928, 534);
 			this->Controls->Add(this->VersionLbl);
 			this->Controls->Add(this->AddInstanceBtn);
-			this->Controls->Add(this->RemoveInstanceBtn);
 			this->Controls->Add(this->SectionInstancePnl);
 			this->Controls->Add(this->SectionHeadingPnl);
 			this->Name = L"EducationWorkExpProjects";
@@ -230,7 +284,6 @@ namespace CVBuilder {
 
 		}
 #pragma endregion
-private: System::Void EducationWorkExpProjects_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void EducationWorkExpProjects_Load(System::Object^ sender, System::EventArgs^ e){}
 };
 }

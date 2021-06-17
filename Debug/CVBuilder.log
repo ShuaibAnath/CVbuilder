@@ -1,11 +1,1 @@
-﻿  CategoryBox.cpp
-  CreateCv.cpp
-  GeneralPage.cpp
-  MyForm.cpp
-C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\MyForm.cpp(97,20): warning C4101: 'ex': unreferenced local variable
-  Skills.cpp
-  main.cpp
-C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\main.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  Generating Code...
-  CategoryBox.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  CVBuilder.vcxproj -> C:\Users\parmd\Desktop\3rd Year Semester 1\Computer Methods 3\C++ Projects\CV\CVbuilder\Debug\CVBuilder.exe
+﻿  CVBuilder.vcxproj -> C:\Users\Student\source\repos\CVBuilderGit\CVbuilder\Debug\CVBuilder.exe

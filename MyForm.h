@@ -1,7 +1,6 @@
 #pragma once
 
 #include "CreateCv.h"
-
 #include "MyForm1.h"
 
 
@@ -435,9 +434,9 @@ namespace CVBuilder {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(928, 534);
 			this->Controls->Add(this->VersionLbl);
-			this->Controls->Add(this->WelcomePnl);
 			this->Controls->Add(this->RegisterPnl);
 			this->Controls->Add(this->LoginPnl);
+			this->Controls->Add(this->WelcomePnl);
 			this->ForeColor = System::Drawing::Color::White;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::SizableToolWindow;
 			this->Name = L"MyForm";

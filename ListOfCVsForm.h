@@ -102,9 +102,9 @@ namespace CVBuilder {
 			// panel1
 			// 
 			this->panel1->AutoScroll = true;
-			this->panel1->Location = System::Drawing::Point(263, 101);
+			this->panel1->Location = System::Drawing::Point(67, 54);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(395, 308);
+			this->panel1->Size = System::Drawing::Size(382, 432);
 			this->panel1->TabIndex = 14;
 			// 
 			// ListOfCVsForm

@@ -1,5 +1,5 @@
 #include "MyForm.h"
-
+#include "User.h"
 System::Void CVBuilder::MyForm::RegisterScreenRegBtn_Click(System::Object^ sender, System::EventArgs^ e)
 {//RegisterScreen Register button clicked
 
@@ -36,14 +36,12 @@ System::Void CVBuilder::MyForm::RegisterScreenRegBtn_Click(System::Object^ sende
 				{//does password match confirmed Password
 					conDataBase->Open();
 					myReader = cmdDataBase->ExecuteReader();
+					User userObj(email);
 					MessageBox::Show("Registration successful");
 					this->Hide();
 					
 					CreateCv^ Create = gcnew CreateCv();
 					Create->ShowDialog();
-					
-					
-					
 				}// check if password is confirmed correctly 
 				else
 				{//else password and confirm password does not match
@@ -82,7 +80,8 @@ System::Void  CVBuilder::MyForm::LoginScreenLoginBtn_Click(System::Object^ sende
 		}
 		if (recordExists)
 		{//Login Successful
-			MessageBox::Show("Login SuccessFul!!!");
+			User userObj(email);
+			MessageBox::Show("Login Successful!!!");
 			this->Hide();
 			
 			CreateCv^ Create = gcnew CreateCv();

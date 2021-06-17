@@ -1,6 +1,7 @@
 #pragma once
 #include "PersonalDetails.h"
 #include "Skills.h"
+#include "EducationWorkExpProjects.h"
 
 namespace CVBuilder {
 
@@ -36,13 +37,15 @@ namespace CVBuilder {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ textBox1;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Panel^ ListOfCVsPnl;
+	private: System::Windows::Forms::Label^ ListOfCVsLbl;
 
 	protected:
 
@@ -60,28 +63,16 @@ namespace CVBuilder {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GeneralPage::typeid));
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->ListOfCVsPnl = (gcnew System::Windows::Forms::Panel());
+			this->ListOfCVsLbl = (gcnew System::Windows::Forms::Label());
+			this->ListOfCVsPnl->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::Red;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(12, 12);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(904, 29);
-			this->textBox1->TabIndex = 0;
-			this->textBox1->Text = L"CV INFORMATION";
-			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &GeneralPage::textBox1_TextChanged);
 			// 
 			// button1
 			// 
@@ -107,6 +98,7 @@ namespace CVBuilder {
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"EDUCATION";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &GeneralPage::button2_Click);
 			// 
 			// button3
 			// 
@@ -119,6 +111,7 @@ namespace CVBuilder {
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"WORK EXPERIENCE";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &GeneralPage::button3_Click);
 			// 
 			// button4
 			// 
@@ -131,6 +124,7 @@ namespace CVBuilder {
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"PROJECTS";
 			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &GeneralPage::button4_Click);
 			// 
 			// button5
 			// 
@@ -159,23 +153,45 @@ namespace CVBuilder {
 			this->textBox2->Text = L"Version 1.0";
 			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
+			// ListOfCVsPnl
+			// 
+			this->ListOfCVsPnl->BackColor = System::Drawing::Color::Red;
+			this->ListOfCVsPnl->Controls->Add(this->ListOfCVsLbl);
+			this->ListOfCVsPnl->Location = System::Drawing::Point(1, 12);
+			this->ListOfCVsPnl->Name = L"ListOfCVsPnl";
+			this->ListOfCVsPnl->Size = System::Drawing::Size(925, 26);
+			this->ListOfCVsPnl->TabIndex = 7;
+			// 
+			// ListOfCVsLbl
+			// 
+			this->ListOfCVsLbl->AutoSize = true;
+			this->ListOfCVsLbl->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ListOfCVsLbl->Location = System::Drawing::Point(399, 0);
+			this->ListOfCVsLbl->Name = L"ListOfCVsLbl";
+			this->ListOfCVsLbl->Size = System::Drawing::Size(136, 21);
+			this->ListOfCVsLbl->TabIndex = 0;
+			this->ListOfCVsLbl->Text = L"CV INORMATION";
+			// 
 			// GeneralPage
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(928, 534);
+			this->Controls->Add(this->ListOfCVsPnl);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox1);
 			this->Name = L"GeneralPage";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"GeneralPage";
 			this->Load += gcnew System::EventHandler(this, &GeneralPage::GeneralPage_Load);
+			this->ListOfCVsPnl->ResumeLayout(false);
+			this->ListOfCVsPnl->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -187,5 +203,8 @@ namespace CVBuilder {
 	private: System::Void GeneralPage_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
