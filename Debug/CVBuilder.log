@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  CreateCv.cpp
   EducationWorkExpProjects.cpp
 C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\EducationWorkExpProjects.cpp(53,21): warning C4101: 'ex': unreferenced local variable
@@ -14,3 +15,26 @@ C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\main.cpp(7,33): warning C48
   Generating Code...
   CategoryBox.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   CVBuilder.vcxproj -> C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\Debug\CVBuilder.exe
+=======
+﻿  CategoryBox.cpp
+  CreateCv.cpp
+  EducationWorkExpProjects.cpp
+  GeneralPage.cpp
+  ListOfCVsForm.cpp
+  main.cpp
+C:\Users\parmd\source\repos\UpdatedCVBuilder\main.cpp(7,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  MyForm.cpp
+C:\Users\parmd\source\repos\UpdatedCVBuilder\MyForm.cpp(96,20): warning C4101: 'ex': unreferenced local variable
+  MyForm1.cpp
+  PersonalDetails.cpp
+C:\Users\parmd\source\repos\UpdatedCVBuilder\PersonalDetails.cpp(50,21): warning C4101: 'ex': unreferenced local variable
+  SelectTemplateForm.cpp
+  Skills.cpp
+  Template1.cpp
+  Template2.cpp
+  User.cpp
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Generating Code...
+  CategoryBox.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  CVBuilder.vcxproj -> C:\Users\parmd\source\repos\UpdatedCVBuilder\Debug\CVBuilder.exe
+>>>>>>> a3e9cb5544689b99c56f75626d4e4f83dffb99e3

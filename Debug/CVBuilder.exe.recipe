@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
       <FullPath>C:\Users\Student\source\repos\CvBuilderGit\CVbuilder\Debug\CVBuilder.exe</FullPath>
+=======
+      <FullPath>C:\Users\parmd\source\repos\UpdatedCVBuilder\Debug\CVBuilder.exe</FullPath>
+>>>>>>> a3e9cb5544689b99c56f75626d4e4f83dffb99e3
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
